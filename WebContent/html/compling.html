@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/compling.css">
+<title>编译原理</title>
+</head>
+<body>
+	<div class="operate">
+		<div class="btn-group">
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle"
+					data-toggle="dropdown">
+					文件 <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a  href="javascript:;" class="upload"><!-- <a href="javascript:;" class="upload" onclick="openFile()"> --><input type="file" id="fileId"
+						onchange="handleFiles(this.files)">打开</a></li>
+					<li><a href="javascript:;" class="upload" onclick="saveFile()">保存</a></li>
+					<li><a href="javascript:;" class="upload" onclick="saveOtherFile()">另存为</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle"
+					data-toggle="dropdown">
+					词法分析 <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="javascript:;" class="upload" style="width:158px" onclick="readOneLine()">手动生成过程演示M</a></li>
+					<li><a href="javascript:;" class="upload" style="width:158px">自动生成算法演示A</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle"
+					data-toggle="dropdown">
+					语法分析 <!-- <span class="caret"></span> -->
+				</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle"
+					data-toggle="dropdown">
+					中间代码生成<!--  <span class="caret"></span> -->
+				</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle"
+					data-toggle="dropdown">
+					目标代码生成 <!-- <span class="caret"></span> -->
+				</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle"
+					data-toggle="dropdown">
+					帮助 <!-- <span class="caret"></span> -->
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="sourceProgram">
+			<h1>源程序</h1>
+			<textarea id="myDiv" class="container1"></textarea>
+		</div>
+		<div class="tokenList">
+			<h1>token列表</h1>
+			<div class="container2 autoScroll" disabled><table id="token"><tr style="color:red;font-weight:bold;font-size:25px;"><td>种别码</td><td>单词</td><td>描述</td></tr></table></div>
+			<!-- <div class="container2" id="token"></div> -->
+		</div>
+		<div class="symbolTab">
+			<h1>符号表</h1>
+			<div  class="container3 autoScroll" disabled><table id="symbals"><tr style="color:red;font-weight:bold;font-size:25px;"><td>种别码</td><td>单词</td><td>描述</td></tr></table></div>
+			<!-- <div class="container3"></div> -->
+		</div>
+		<div class="errorTab">
+			<h1>错误信息表</h1>
+			<div class="container4 autoScroll" disabled><table id="error"><tr style="color:red;font-weight:bold;font-size:25px;"><td>错误描述</td><td>单词</td></tr></table></div>
+			<!-- <div class="container4"></div> -->
+		</div>
+	</div>
+	
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/compling.js"></script>
+</body>
+</html>
